@@ -1,15 +1,18 @@
 // import {   } from "@/assets/images/images/ .jpg";
 
-import {   } from "@/assets/images";
+// import {   } from "@/assets/images";
+import { getData } from "@/service/get-data";
+import { Card } from "@/components/card";
 
 import React from "react";
 
-const Home = () => {
+export default async function Home() {
+  const data = await getData();
   return (
     // <div>
      <div className="flex flex-wrap gap-16 justify-center border-spacing-1 mt-60">
        
-          <div
+          {/* <div
            
             className=" hover:scale-100 transition duration-500 cursor-pointer object-cover hover:shadow-2xl "
             style={{ width: "18em", height: "22em" }}
@@ -278,11 +281,14 @@ const Home = () => {
                 <p className="font-semibold pr-1">Cost: 1400 $</p>
               </p>
             </div>
-          </div>
+          </div> */}
+          {data?.map((item) => (
+        <Card key={item.id} {...item} />
+      ))}
         
       </div>
     // </div>
   );
 };
 
-export default Home;
+// export default Home;

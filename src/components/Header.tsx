@@ -39,13 +39,13 @@ const Header = () => {
                 />
               </div>
               <button type="submit" className="p-4">
-                <Image src={SearchIcon} alt="searchicon" className="w-6 h-6" />
+                <Image src={SearchIcon} alt="searchicon" className="w-6 h-6"  />
               </button>
             </form>
           </div>
           <div className="h-[43px] gap-1 items-center flex flex-col cursor-pointer">
             <Image src={savat} alt="basketIco" className="w-5 h-5" />
-            <p className="text-[12px]">Savat</p>
+            <Link href="/about" className="text-[12px]">Savat</Link>
           </div>
           <div className="h-[43px] gap-1 items-center flex-col cursor-pointer hidden sm:flex">
             <Image src={Heart} alt="basketIco" className="w-5 h-5" />
